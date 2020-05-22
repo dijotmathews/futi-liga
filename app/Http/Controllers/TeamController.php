@@ -3,11 +3,10 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\DB;
 
-use App\Models\Player;
+use App\Models\Team;
 
-class PlayerController extends Controller
+class TeamController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -17,17 +16,10 @@ class PlayerController extends Controller
     public function index()
     {
         //
-        $players = Player::all();
-        
-        return view('players', compact('players'));
-    }
-    public function get_players(int $team_id)
-    {
+        $teams = Team::All();
+        //dd($teams);
 
-        $players = Player::where('team_id', $team_id)->get();
-        
-        return view('players', compact('players'));
-        
+        return view('teams', compact('teams'));
     }
 
     /**
@@ -38,6 +30,7 @@ class PlayerController extends Controller
     public function create()
     {
         //
+   
     }
 
     /**

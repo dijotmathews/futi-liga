@@ -14,4 +14,7 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', 'PlayerController@index');
-Route::get('getplayer', 'PlayerController@get_players');
+
+Route::get('players/{team_id}', 'PlayerController@get_players');
+
+Route::get('teams', 'TeamController@index');

@@ -9,6 +9,7 @@ class Team extends Model
     //
 
     protected $fillable =  ['name', 'won', 'loss', 'draw', 'point', 'coach'];
+    
     public function players()
     {
         return $this->hasMany('App\Models\Player');
