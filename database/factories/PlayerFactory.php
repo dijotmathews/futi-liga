@@ -11,6 +11,7 @@ $factory->define(Player::class, function (Faker $faker) {
         'surname' => $faker->lastName,
         'jersey' => $faker->numberBetween(1, 100),
         'position' => $faker->randomElement(array('lb', 'rb', 'cmf', 'cf', 'gk', 'rf', 'lf')),
-        'role' => ''
+        'role' => '',
+        'team_id' => $faker->numberBetween(1,10)
     ];
 });
