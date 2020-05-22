@@ -5,8 +5,12 @@
 use App\Models\Player;
 use Faker\Generator as Faker;
 
-$factory->define(Model::class, function (Faker $faker) {
+$factory->define(Player::class, function (Faker $faker) {
     return [
-        //
+        'name' => $faker->firstNameMale,
+        'surname' => $faker->lastName,
+        'jersey' => $faker->numberBetween(1, 100),
+        'position' => $faker->randomElement(array('lb', 'rb', 'cmf', 'cf', 'gk', 'rf', 'lf')),
+        'role' => ''
     ];
 });

@@ -17,20 +17,21 @@ class PlayerSeeder extends Seeder
     {
         // list of initial players
 
-        $players = [
-            ['name' => 'Lieonel', 'surname' => 'Messi', 'jersey' => 10, 'position' => 'lwf', 'role' => 'c' ], 
-            ['name' => 'Jordi','surname' =>  'Alba', 'jersey' => 11, 'position' =>  'lb', 'role' => ''], 
-            ['name' => 'Luis', 'surname' => 'Suarez', 'jersey' => 9, 'position' =>  'cf', 'role' => '']
-        ];
+        // $players = [
+        //     ['name' => 'Lieonel', 'surname' => 'Messi', 'jersey' => 10, 'position' => 'lwf', 'role' => 'c' ], 
+        //     ['name' => 'Jordi','surname' =>  'Alba', 'jersey' => 11, 'position' =>  'lb', 'role' => ''], 
+        //     ['name' => 'Luis', 'surname' => 'Suarez', 'jersey' => 9, 'position' =>  'cf', 'role' => '']
+        // ];
 
-
+        $players = factory(App\Models\Player::class, 10)->create();
        
-        foreach($players as $pl)
-        {
-            $player = Player::create($pl);
+        // foreach($players as $pl)
+        // {
+        //     $player = Player::create($pl);
             
-        }
+        // }
         
+        //$players = factory(App\Models\Player::class, 10)->make();
 
        
 
