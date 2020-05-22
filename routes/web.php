@@ -14,3 +14,4 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', 'PlayerController@index');
+Route::get('getplayer', 'PlayerController@get_players');

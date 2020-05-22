@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 use App\Models\Player;
 
@@ -19,6 +20,13 @@ class PlayerController extends Controller
         $players = Player::all();
         
         return view('players', compact('players'));
+    }
+    public function get_players()
+    {
+
+        $getby_team = DB::select('select * from players where team_id = :id', ['id' => 10]);
+        print_r($getby_team);
+        
     }
 
     /**
