@@ -12,6 +12,8 @@ $factory->define(Team::class, function (Faker $faker) {
         'loss' => $faker->numberBetween(1,5),
         'draw' => $faker->numberBetween(5,10),
         'point' => $faker->numberBetween(20,40),
-        'coach' => $faker->name('male')
+        'coach' => $faker->name('male'),
+        'pool_id' => 1
+
     ];
 });

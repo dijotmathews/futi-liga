@@ -21,7 +21,9 @@ class CreateTeamsTable extends Migration
             $table->unsignedInteger('draw')->default(0);
             $table->unsignedInteger('point')->default(0);
             $table->char('coach', 50)->nullable();
+            $table->integer('pool_id')->nullable('false');
             $table->timestamps();
+
         });
     }
 
