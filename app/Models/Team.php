@@ -8,7 +8,7 @@ class Team extends Model
 {
     //
 
-    protected $fillable =  ['name', 'won', 'loss', 'draw', 'point', 'coach'];
+    protected $fillable =  ['name', 'won', 'loss', 'draw', 'point', 'coach','pool_id'];
     
     public function players()
     {

@@ -13,10 +13,10 @@ class TeamController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(int $pool_id)
     {
-        //
-        $teams = Team::All();
+        
+        $teams = Team::where('pool_id', $pool_id)->get();
         //dd($teams);
 
         return view('teams', compact('teams'));

@@ -17,7 +17,7 @@
 
     <table border = "1" id="playertable">
     <tr>
-    <th>Name</th><th>Won</th><th>Loss</th><th>Draw</th><th>Points</th><th>Coach</th>
+    <th>Name</th><th>Won</th><th>Loss</th><th>Draw</th><th>Points</th><th>Coach</th><th>Pool ID</th>
     </tr>
     @foreach($teams as $team)
     <tr>
@@ -27,6 +27,7 @@
     <td>{{ $team->draw }}</td>
     <td>{{ $team->point }}</td>
     <td>{{ $team->coach }}</td>
+    <td>{{ $team->pool_id }}</td>
     </tr>
     @endforeach
     
