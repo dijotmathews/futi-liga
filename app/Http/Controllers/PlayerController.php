@@ -25,7 +25,7 @@ class PlayerController extends Controller
     {
 
         $players = Player::where('team_id', $team_id)->get();
-        
+    
         return view('players', compact('players'));
         
     }
